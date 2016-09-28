@@ -1,8 +1,11 @@
 package com.airbnb.amaliujia.GilgameshSE.index;
 
 
-public class Indexer {
-    public Indexer(IndexerConfig) {
+import org.apache.lucene.index.IndexWriter;
 
+public class Indexer {
+    private IndexWriter indexWriter;
+
+    public Indexer(IndexerConfig config) {
     }
 }
