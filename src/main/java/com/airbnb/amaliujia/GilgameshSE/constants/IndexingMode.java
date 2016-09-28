@@ -1,7 +1,7 @@
 package com.airbnb.amaliujia.GilgameshSE.constants;
 
 /**
- * Created by amaliujia on 9/27/16.
+ * @author amaliujia
  */
 public enum IndexingMode {
     CREATE,

@@ -11,13 +11,14 @@ public class GilgameshSEApplication {
     public static void main(String[] args) {
         Options options = new Options();
 
-        Option input = new Option("i", "input", true, "input file path");
-        input.setRequired(true);
+        Option input = new Option("i", "index", true, "index path");
         options.addOption(input);
-
+        input = new Option("f", "file", true, "file path");
+        options.addOption(input);
         input = new Option("m", "mode", true, "application mode");
         input.setRequired(true);
         options.addOption(input);
+        input = new Option("c", "in", true, "application mode");
 
         CommandLineParser parser = new DefaultParser();
         HelpFormatter formatter = new HelpFormatter();
@@ -40,10 +41,8 @@ public class GilgameshSEApplication {
         } catch (IllegalArgumentException e) {
             log.error(String.format("Application received wrong mode %s, err %s", appMode, e.getMessage()));
         }
-//        String inputFilePath = cmd.getOptionValue("input");
-//        log.debug("path: " + inputFilePath);
 
-        TrecContentSource trecContentSource = new TrecContentSource();
+
         return;
     }
 }
