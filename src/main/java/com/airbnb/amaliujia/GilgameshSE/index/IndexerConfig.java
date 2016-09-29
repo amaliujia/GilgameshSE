@@ -17,6 +17,10 @@ public class IndexerConfig {
         propoerties = new HashMap<String, String>();
     }
 
+    public IndexerConfig(Map<String, String> param) {
+        propoerties = param;
+    }
+
     public void setPropoerties(String name, String value) {
         propoerties.put(name, value);
     }
